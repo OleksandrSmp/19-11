@@ -1,2 +1,3 @@
-print('ok1')
+print('ok')
 print('ok2')
+
