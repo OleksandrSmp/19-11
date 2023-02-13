@@ -4,4 +4,6 @@
 import random
 lst1= [random.randint(1, 100) for i in range(random.randint(3, 10))]
 print(lst1)
-print([lst1[0]] + [lst1[2]] + [lst1[-2]])
+lst = ([lst1[0]] + [lst1[2]] + [lst1[-2]])
+print(lst)
+
