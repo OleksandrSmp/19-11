@@ -13,6 +13,6 @@ while True:
             print(a / b)
         else:
             print("Неверная операция")
-    z = input('Yes:')
-    if z is not input('Yes:'):
+    z = input('Yes:').lower()
+    if z != 'yes':
         break
