@@ -1,8 +1,8 @@
 import string
-input_str = input("Введите две буквы через дефис: ")
-min_letter, max_letter = input_str.split("-")
+str = input("Введите две буквы через дефис: ")
+min, max = str.split("-")
 letters = string.ascii_letters
-start_index = letters.index(min_letter)
-end_index = letters.index(max_letter)
-result = letters[start_index:end_index+1]
+form1 = letters.index(min)
+form2 = letters.index(max)
+result = letters[form1 : form2 +1]
 print(result)
