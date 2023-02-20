@@ -1,5 +1,5 @@
 seconds = int(input("Введите количество секунд: "))
-if seconds < 1 or seconds > 8639999:
+if seconds < 0 or seconds > 8639999:
     print("Ошибка! Введено неверное число секунд.")
 else:
     days = seconds // 86400
@@ -8,7 +8,7 @@ else:
     seconds %= 3600
     minutes = seconds // 60
     seconds %= 60
-    num = ""
+    num = " "
     if days > 0:
         num += str(days) + " день "
     if hours < 10:
