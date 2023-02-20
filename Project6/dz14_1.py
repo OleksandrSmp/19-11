@@ -1,4 +1,4 @@
-number = int(input("Введите целое число больше нуля: "))
+number = int(input("Введите целое число: "))
 while number > 9:
     digits = [int(d) for d in str(number)]
     a = 1
