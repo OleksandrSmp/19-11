@@ -10,7 +10,7 @@ else:
     seconds %= 60
     num = " "
     if days > 0:
-        num += str(days) + " день "
+        num += str(days) + " день, "
     if hours < 10:
         num += "0"
     num += str(hours) + ":"
