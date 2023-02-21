@@ -1,13 +1,23 @@
-seconds = int(input("Введите количество секунд: "))
-if seconds < 0 or seconds > 8639999:
-    print("Ошибка! Введено неверное число секунд.")
+digit = int(input('Type seconds: '))
+days, digit= divmod(digit, 60*60*24)
+hours, second = divmod(digit, 60*60)
+minutes, seconds = divmod(digit, 60)
+if 5 < days < 21:
+     days_str = "дней"
+elif str(days)[-1] == '1':
+     day_str = "день"
+elif str(days)[-1] in ('234'):
+     day_str = "дня"
 else:
-    days, seconds = divmod(seconds, 24*60*60)
-    hours, seconds = divmod(seconds, 60*60)
-    minutes, seconds = divmod(seconds, 60)
-    result = f"{days} дней, {str(hours).zfill(2)}:{str(minutes).zfill(2)}:{str(seconds).zfill(2)}" \
-        if days > 0 else f"0 дней, {str(hours).zfill(2)}:{str(minutes).zfill(2)}:{str(seconds).zfill(2)}"
-    print(result)
+    day_str = "дней"
+res = f'{days} {day_str}, {str(hours).zfill(2)}:{str(minutes).zfill(2)}:{str(seconds).zfill(2)}'
+print(res)
+
+
+
+
+
+
 
 
 
