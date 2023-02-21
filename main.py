@@ -1,12 +1,12 @@
+seconds = int(input("Введите число секунд: "))
 
-a = int(input('Введите четырехзначное число:'))
-b = 10000
-x = 1000
-y = 100
-z = 10
-left, right = divmod(a, b)
-n, m = divmod(right, x)
-n1, m1 = divmod(m, y)
-n2, m2 = divmod(m1, z)
-left, n, n1, n2, m2 = m2, n2, n1, n, left
-print(left, n, n1, n2, m2)
+days = seconds // (24 * 3600)
+seconds = seconds % (24 * 3600)
+
+hours = seconds // 3600
+seconds = seconds % 3600
+
+minutes = seconds // 60
+seconds = seconds % 60
+
+print("Время: {:02d}:{:02d}:{:02d}:{:02d}".format(days, hours, minutes, seconds))

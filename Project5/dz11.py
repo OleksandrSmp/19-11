@@ -14,5 +14,5 @@ while True:
         else:
             print("Неверная операция")
     z = input('Yes:').lower()
-    if z != 'yes':
+    if z != 'Yes':
         break
