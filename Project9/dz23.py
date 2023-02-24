@@ -1,7 +1,7 @@
 def popular_words(text, words):
-    words_in_text = text.lower().split()
+    words_text = text.lower().split()
     result_dict = {word: 0 for word in words}
-    for word in words_in_text:
+    for word in words_text:
         if word in words:
             result_dict[word] += 1
     return result_dict
