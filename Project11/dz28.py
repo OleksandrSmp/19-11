@@ -1,11 +1,11 @@
 def prime_generator(end):
-    primes = []
+    diction = []
     for num in range(2, end):
-        for prime in primes:
-            if num % prime == 0:
+        for num_1 in diction:
+            if num % num_1 == 0:
                 break
         else:
-            primes.append(num)
+            diction.append(num)
             yield num
 assert list(prime_generator(10)) == [2, 3, 5, 7], 'Test1'
 assert list(prime_generator(15)) == [2, 3, 5, 7, 11, 13], 'Test2'
