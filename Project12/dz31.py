@@ -8,6 +8,8 @@ def delete_html_tags(html_file, result_file = 'cleaned.txt'):
         cleaned_text = '\n'.join(lines)
     with codecs.open(result_file, 'w', 'utf-8') as file:
         file.write(cleaned_text)
+        print(html)
+
 
 
 
