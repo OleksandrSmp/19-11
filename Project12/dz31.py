@@ -1,14 +1,17 @@
 import codecs
 import re
-def delete_html_tags(html_file, result_file = 'cleaned.txt'):
-    with codecs.open(html_file, 'r', 'utf-8') as file:
+def delete_html_tags(html_file, result_file='cleaned.txt'):
+    with open(html_file, 'r', encoding='utf-8') as file:
         html = file.read()
         cleaned_text = re.sub('<.*?>', '', html)
-        lines = filter(lambda x: x.strip(), cleaned_text.splitlines())
-        cleaned_text = '\n'.join(lines)
-    with codecs.open('cleaned.txt', 'r', 'utf-8') as file:
+    with open(result_file, 'w', encoding='utf-8') as file:
+        file.write(cleaned_text)
+        delete_html_tags('example.html', 'cleaned.txt')
+    with open('cleaned.txt', 'r', encoding='utf-8') as file:
         cleaned_text = file.read()
     print(cleaned_text)
+
+
 
 
 
