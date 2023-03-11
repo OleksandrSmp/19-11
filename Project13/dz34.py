@@ -40,3 +40,4 @@ try:
 except ValueError as e:
     assert str(e) == "Достигнут минимум"
 assert counter.get_current() == 7
+print(counter.get_current())
