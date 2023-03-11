@@ -43,3 +43,4 @@ lemon: 4 pcs.
 apple: 20 pcs.
 """
 assert cart.get_total() == 60
+print(cart.get_total())
