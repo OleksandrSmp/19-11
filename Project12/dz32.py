@@ -1,4 +1,5 @@
 class Item:
+
     def __init__(self, name, price, description, dimensions):
         self.name = name
         self.price = price
@@ -9,6 +10,7 @@ class Item:
         return f'{self.name}, price: {self.price}'
 
 class User:
+
     def __init__(self, name, surname, numberphone):
         self.name = name
         self.surname = surname
@@ -18,6 +20,7 @@ class User:
         return f'{self.name} {self.surname}'
 
 class Purchase:
+
     def __init__(self, user):
         self.products = {}
         self.user = user
