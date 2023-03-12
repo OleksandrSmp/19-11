@@ -52,7 +52,6 @@ st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
 gr = Group('PD1')
 gr.add_student(st1)
 gr.add_student(st2)
-# print(gr)
 
 for i in range(10):
     try:
