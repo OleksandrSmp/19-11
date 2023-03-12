@@ -20,8 +20,7 @@ class Student(Human):
 
 class Group:
     class GroupOverflowError(Exception):
-        pass
-
+       pass
     MAX_STUDENTS = 10
 
     def __init__(self, number):
@@ -53,10 +52,11 @@ st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
 gr = Group('PD1')
 gr.add_student(st1)
 gr.add_student(st2)
+# print(gr)
 
 for i in range(10):
     try:
-        st = Student('Male', 20+i, f'Name{i}', f'Surname{i}', f'AN{i}')
+        st = Student('Male', 20 + i, f'Name{i}', f'Surname{i}', f'AN{i}')
         gr.add_student(st)
     except Group.GroupOverflowError as e:
         print(f"Error: {e}")
