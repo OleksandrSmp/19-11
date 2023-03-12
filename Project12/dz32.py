@@ -34,8 +34,10 @@ class Purchase:
         return f'User: {self.user}\nItems:\n{items_str}'
 
     def get_total(self):
-        self.total = sum([item.price * self.products[item] for item in self.products])
-        return self.total
+        total = 0  # объявляем временную переменную
+        for item in self.products:
+            total += item.price * self.products[item]
+        return total
 
 lemon = Item('lemon', 5, "yellow", "small")
 apple = Item('apple', 2, "red", "middle")
