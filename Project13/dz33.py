@@ -1,4 +1,5 @@
 class Human:
+
     def __init__(self, gender, age, first_name, last_name):
         self.gender = gender
         self.age = age
@@ -9,6 +10,7 @@ class Human:
         return f'{self.first_name} {self.last_name}, {self.age}, {self.gender}'
 
 class Student(Human):
+
     def __init__(self, gender, age, first_name, last_name, record_book):
         super().__init__(gender, age, first_name, last_name)
         self.record_book = record_book
@@ -17,6 +19,7 @@ class Student(Human):
         return f'{self.first_name} {self.last_name}, {self.age}, {self.gender}, {self.record_book}'
 
 class Group:
+
     def __init__(self, number):
         self.number = number
         self.group = set()
