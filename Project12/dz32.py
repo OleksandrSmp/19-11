@@ -34,8 +34,7 @@ class Purchase:
         return f'User: {self.user}\nItems:\n{items_str}'
 
     def get_total(self):
-        for item in self.products:
-            self.total += item.price * self.products[item]
+        self.total = sum([item.price * self.products[item] for item in self.products])
         return self.total
 
 lemon = Item('lemon', 5, "yellow", "small")
