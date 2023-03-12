@@ -1,4 +1,5 @@
 class Counter:
+
     def __init__(self, current=0, min_value=0, max_value=10):
         self.current = current
         self.min_value = min_value
