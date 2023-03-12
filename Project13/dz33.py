@@ -6,12 +6,14 @@ class Human:
         self.last_name = last_name
     def __str__(self):
         return f'{self.first_name} {self.last_name}, {self.age}, {self.gender}'
+
 class Student(Human):
     def __init__(self, gender, age, first_name, last_name, record_book):
         super().__init__(gender, age, first_name, last_name)
         self.record_book = record_book
     def __str__(self):
         return f'{self.first_name} {self.last_name}, {self.age}, {self.gender}, {self.record_book}'
+
 class Group:
     def __init__(self, number):
         self.number = number
@@ -30,6 +32,7 @@ class Group:
     def __str__(self):
         all_students = '\n'.join([str(student) for student in self.group])
         return f'Number:{self.number}\n{all_students}'
+
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
 gr = Group('PD1')
