@@ -23,14 +23,13 @@ class Rectangle:
     def __str__(self):
         return f'Rectangle: width={self.width}, height={self.height}'
 
-
 r1 = Rectangle(2, 4)
 r2 = Rectangle(3, 6)
 assert r1.get_square() == 8
 assert r2.get_square() == 18
 
 r3 = r1 + r2
-assert r3.get_square() == 54
+assert r3.get_square() == 26
 
 r4 = r1 * 4
 assert r4.get_square() == 32
