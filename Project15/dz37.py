@@ -11,14 +11,10 @@ class Rectangle:
         return self.get_square() == other.get_square()
 
     def __add__(self, other):
-        width = self.width + other.width
-        height = self.height + other.height
-        return Rectangle(width, height)
+        return Rectangle(self.width + other.width, self.height + other.height)
 
     def __mul__(self, n):
-        width = self.width * n
-        height = self.height * n
-        return Rectangle(width, height)
+        return Rectangle(self.width * n, self.height * n)
 
     def __str__(self):
         return f"Rectangle({self.width}, {self.height})"
